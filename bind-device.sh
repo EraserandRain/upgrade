@@ -9,3 +9,5 @@ for i in ${disk};
       echo DEVPATH=="\"${a}"\", NAME="\"sd${i}"\", MODE="\"0660"\">>/etc/udev/rules.d/80-mydisk.rules;
       fi
 done
+cat /etc/udev/rules.d/80-mydisk.rules
+exit 1
