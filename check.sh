@@ -1,7 +1,7 @@
 #!/bin/bash
 export LC_ALL=C
 
-ip addr
+ip a
 cat /etc/crontab | grep -v '#'|grep -E --color 'iptables'
 lsblk /dev/sdb|grep sdb --color
 lspci|grep 3:00 --color
