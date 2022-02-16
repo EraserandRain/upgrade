@@ -6,8 +6,9 @@ for i in ${disk};
        if [ ! -n "$a" ]; then
           break 1 ;
       else
-      echo DEVPATH=="\"${a}"\", NAME="\"sd${i}"\", MODE="\"0660"\">>/etc/udev/rules.d/80-mydisk.rules;
+      echo DEVPATH=="\"${a}"\", NAME="\"sd${i}"\", MODE="\"0660"\">/etc/udev/rules.d/80-mydisk.rules;
       fi
 done
+echo "/etc/udev/rules.d/80-mydisk.rules"
 cat /etc/udev/rules.d/80-mydisk.rules
 exit 1
